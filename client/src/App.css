@@ -1,0 +1,191 @@
+/* App.css */
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-manager {
+  
+  max-width: 600px;
+  width: 100%;  
+}
+
+.heading{
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.dark .App {
+  background-color: #333;
+  color: #fff;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: #d0ffd0;
+}
+
+.task-filter {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.dark .task-form,
+.dark .task-list,
+.dark .task-filter {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark .task-item {
+  background-color: #222;
+  color: #fff;
+}
+.task-form,
+.task-list {
+  width: 100%;
+}
+.toggle-label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Toggle slider */
+.toggle-slider {
+  position: relative;
+  width: 30px;
+  height: 14px;
+  background-color: #ccc;
+  border-radius: 7px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.toggle-input {
+  display: none; 
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 0;
+  top: -3px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.dark-mode-toggle.dark .toggle-slider::before {
+  transform: translateX(16px);
+  background-color: #007bff;
+}
+
+.dark-mode-toggle.dark .toggle-label {
+  color: #fff;
+}
+.dark-mode-toggle.light .toggle-slider {
+  background-color: #ccc;
+}
+
+.dark-mode-toggle.light .toggle-slider::before {
+  transform: translateX(0);
+  background-color: #fff;
+}
+
+.dark-mode-toggle.light .toggle-label {
+  color: #333; 
+}
+
+.dark-mode-toggle {
+  margin-bottom: 20px;
+}
+
+/* TaskItem.css (or your preferred CSS file) */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 8px 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.task-cell {
+  flex: 1;
+  padding: 8px;
+}
+
+.completed {
+  background-color: #e0e0e0;
+  color: #555;
+  text-decoration: line-through;
+}
+.error{
+  color: red;
+}
